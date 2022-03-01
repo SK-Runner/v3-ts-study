@@ -1,2 +1,69 @@
 # v3-ts-study
-学习项目及笔记
+## 一、typescript
+
+### 1、手动编译TS
+
+- ts文件中直接书法js代码，在html中直接引入ts代码，浏览器可以直接使用。
+- 如果有ts代码，需要将ts编译为js文件，再将js引入html。
+
+编译指令：
+
+```
+tsc hello-ts.ts
+```
+
+### 2、自动编译TS
+
+1）、根目录中生成tsonfig.json
+
+```
+tsc --init
+```
+
+2）、修改配置文件中的输出路径和是否使用严格模式
+
+3）、点击“终端”—>“运行任务”—>“显示所有任务”—>选择“tsc:监视...”
+
+4）、当保存ts时，代码自动转化为js。
+
+### 3、类型注解
+
+​	TypeScript 里的**类型注解**是**一种轻量级的为函数或变量添加约束的方式**。 在这个例子里，我们希望 `greeter` 函数接收一个字符串参数。 然后尝试把 `greeter` 的调用改成传入一个数组：
+
+```
+function greeter (person: string) {
+  return 'Hello, ' + person
+}
+let user = [0, 1, 2]
+console.log(greeter(user))
+```
+
+重新编译，你会看到产生了一个错误：
+
+```
+error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string'.
+```
+
+​	类似地，尝试删除 `greeter` 调用的所有参数。 TypeScript 会告诉你使用了非期望个数的参数调用了这个函数。 在这两种情况中，TypeScript提供了**静态的代码分析，它可以分析代码结构和提供的类型注解**。
+
+​	要注意的是尽管有错误，`greeter.js` 文件还是被创建了。 **就算你的代码里有错误，你仍然可以使用 TypeScript。但在这种情况下，TypeScript 会警告你代码可能不会按预期执行。**
+
+### 4、接口
+
+接口定义了数据内部的结构，函数参数可以用接口进行限制，确保内部结构的正确性。
+
+```
+interface person {
+  firstName,
+  lastName
+}
+let getInfo = function(person:person){
+  console.log(`${person.firstName}-${person.lastName}`);
+}
+let p = {
+  firstName:'Jack',
+  lastName:'Jones'
+}
+getInfo(p);
+```
+
