@@ -1,2 +1,8 @@
 /ts-nodes/05-webpack-build-ts/node_modules
 /ts-nodes/05-webpack-build-ts/package-lock.json
+
+/ts-nodes/vue3-study/node_modules
+/ts-nodes/vue3-study/package-lock.json
+
+/ts-nodes/vite-study/node_modules
+/ts-nodes/vite-study/package-lock.json
