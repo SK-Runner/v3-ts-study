@@ -1,8 +1,11 @@
 <template>
   <nav>
-    <router-link to="/setupview">SetupView</router-link> |
-    <router-link to="/refview">RefView</router-link> |
-    <router-link to="/reactiveview">ReactiveView</router-link>
+    <router-link to="/setupview">setup初体验</router-link> |
+    <router-link to="/refview">ref</router-link> |
+    <router-link to="/reactiveview">reactive</router-link> |
+    <router-link to="/setupdetailview">setup细节</router-link> |
+    <router-link to="/leftcycleview">生命周期</router-link> |
+    <router-link to="/hooks">自定义hook</router-link>
   </nav>
   <router-view/>
 </template>

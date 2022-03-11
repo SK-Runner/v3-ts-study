@@ -16,6 +16,21 @@ const routes: Array<RouteRecordRaw> = [
     name: 'ReactiveView',
     component: ()=>import('views/ReactiveView.vue')
   },
+  {
+    path: '/setupdetailview',
+    name: 'SetupDetailView',
+    component: ()=>import('views/SetupDetailView.vue')
+  },
+  {
+    path: '/leftcycleview',
+    name: 'LeftCycleView',
+    component: ()=>import('views/LeftCycleView.vue')
+  },
+  {
+    path:'/hooks',
+    name: 'HookApi',
+    component: ()=>import('views/Hooks.vue')
+  }
 ]
 
 const router = createRouter({
